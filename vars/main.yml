@@ -1,0 +1,101 @@
+---
+# vars file for ansible-role-landir.gnome_conf
+
+# dconf list /org/gnome/desktop/interface/
+# dconf read /org/gnome/desktop/interface/gtk-theme
+# dconf dump /org/gnome/desktop/screensaver/
+
+configuracoes:
+  - chave: "/org/gnome/desktop/interface/gtk-theme"
+    valor: "'Yaru-dark'"
+  - chave: "/org/gnome/desktop/input-sources/sources"
+    valor: "[('xkb', 'br')]"
+    #valor: "[('xkb', 'br'), ('xkb', 'us')]"
+  - chave: "/org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size"
+    valor: "26"
+  - chave: "/org/gnome/shell/favorite-apps"
+    valor: "['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'terminator.desktop', 'org.gnome.Screenshot.desktop', 'org.gnome.gedit.desktop', 'google-chrome.desktop', 'org.gnome.Calculator.desktop']"
+  - chave: "/org/gtk/settings/file-chooser/show-hidden"
+    valor: "true"
+  - chave: "/org/gnome/desktop/peripherals/keyboard/numlock-state"
+    valor: "true"
+  - chave: "/org/gnome/desktop/sound/allow-volume-above-100-percent"
+    valor: "false"
+  - chave: "/org/gnome/desktop/privacy/disable-microphone"
+    valor: "false"
+
+  - chave: "/org/gnome/desktop/background/color-shading-type"
+    valor: "'solid'"
+  - chave: "/org/gnome/desktop/background/picture-options"
+    valor: "'zoom'"
+  - chave: "/org/gnome/desktop/background/picture-uri"
+    valor: "'file:///usr/share/backgrounds/warty-final-ubuntu.png'"
+  - chave: "/org/gnome/desktop/background/primary-color"
+    valor: "'#2c001e'"
+  - chave: "/org/gnome/desktop/background/secondary-color"
+    valor: "'#2c001e'"
+
+  - chave: "/org/gnome/desktop/screensaver/color-shading-type"
+    valor: "'solid'"
+  - chave: "/org/gnome/desktop/screensaver/picture-options"
+    valor: "'zoom'"
+  - chave: "/org/gnome/desktop/screensaver/picture-uri"
+    valor: "'file:///usr/share/backgrounds/warty-final-ubuntu.png'"
+  - chave: "/org/gnome/desktop/screensaver/primary-color"
+    valor: "'#000000'"
+  - chave: "/org/gnome/desktop/screensaver/secondary-color"
+    valor: "'#0000ff'"
+
+
+
+# /usr/share/applications/terminator.desktop
+
+# gsettings list-recursively "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$perfil_uuid/" | cut -c35-
+# gsettings get "org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$perfil_uuid/" palette
+#
+terminal:
+  - "foreground-color '#D3D7CF'"
+  - "highlight-foreground-color '#ffffff'"
+  - "word-char-exceptions '@ms nothing'"
+  - "audible-bell false"
+  - "palette \"['#2E3436', '#CC0000', '#4E9A06', '#C4A000', '#3465A4', '#75507B', '#06989A', '#D3D7CF', '#555753', '#EF2929', '#8AE234', '#FCE94F', '#729FCF', '#AD7FA8', '#34E2E2', '#EEEEEC']\""
+  - "encoding 'UTF-8'"
+  - "bold-color-same-as-fg true"
+  - "login-shell false"
+  - "default-size-rows 24"
+  - "cursor-blink-mode 'system'"
+  - "cursor-colors-set false"
+  - "cursor-background-color '#000000'"
+  - "enable-bidi true"
+  - "use-transparent-background false"
+  - "scrollbar-policy 'always'"
+  - "use-system-font false"
+  - "bold-color '#000000'"
+  - "cursor-foreground-color '#ffffff'"
+  - "visible-name 'Unnamed'"
+  - "custom-command ''"
+  - "scrollback-unlimited false"
+  - "font 'Source Code Pro for Powerline Medium 12'"
+  - "use-theme-transparency true"
+  - "cjk-utf8-ambiguous-width 'narrow'"
+  - "cursor-shape 'block'"
+  - "use-custom-command false"
+  - "exit-action 'close'"
+  - "bold-is-bright false"
+  - "scroll-on-output false"
+  - "highlight-colors-set true"
+  - "delete-binding 'delete-sequence'"
+  - "preserve-working-directory 'safe'"
+  - "backspace-binding 'ascii-delete'"
+  - "background-transparency-percent 50"
+  - "cell-height-scale 1.0"
+  - "use-theme-colors false"
+  - "background-color '#272822'"
+  - "highlight-background-color '#000000'"
+  - "enable-shaping true"
+  - "default-size-columns 150"
+  - "cell-width-scale 1.0"
+  - "scroll-on-keystroke true"
+  - "rewrap-on-resize true"
+  - "scrollback-lines 100000"
+  - "text-blink-mode 'always'"
